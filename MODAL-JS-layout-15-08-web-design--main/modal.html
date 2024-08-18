@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="layout.css" rel="stylesheet">
+</head>
+<body>
+    <div id="modal">
+        <button class="toggle-modal">(X) FECHAR</button>
+        <p>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Maxime</p>
+    </div>
+
+    <div class="box box1">teste</div>
+    <div class="box box2">teste</div>
+    <header>
+        <h1>WTADS</h1>
+    </header>
+
+    <main>
+        <button class="toggle-modal">MOSTRAR MODAL</button>
+        <p>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Maxime</p>
+        <!-- Conteúdo adicional -->
+    </main>
+
+    <footer>
+        <p>Desenvolvido por IFRN</p>
+    </footer>
+
+    <script>
+        const buttons = document.getElementsByClassName("toggle-modal");
+
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", modal);
+        }
+
+        function modal() {
+            const modalElement = document.getElementById("modal");
+            if (window.getComputedStyle(modalElement).visibility === "visible") {
+                modalElement.style.visibility = "hidden";
+            } else {
+                modalElement.style.visibility = "visible";
+            }
+        }
+    </script>
+    
+</body>
+</html>
